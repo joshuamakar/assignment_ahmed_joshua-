@@ -19,8 +19,8 @@ RegisterWindow::~RegisterWindow()
 void RegisterWindow::on_register_button_clicked()
 {
     QString uUsername = ui->lineEdit_username2->text();
-    QString uDay = ui->lineEdit->text();
-    QString uYear = ui->lineEdit_2->text();
+    QString uDay = ui->lineEdit_Day->text();
+    QString uYear = ui->lineEdit_year->text();
     QString uPassword = ui->lineEdit_password2->text();
     QString uRpassword = ui->lineEdit_retype->text();
     QString uMonth = ui->comboBox_month->currentText();
@@ -55,7 +55,7 @@ void RegisterWindow::on_register_button_clicked()
     }
 
     // Check if the age is less than 12 (subtract entered year from 2024)
-    int enteredYear = uYear.toint();
+    int enteredYear = uYear.toInt();
     int currentYear = 2024;
     int age = currentYear-enteredYear;
 
